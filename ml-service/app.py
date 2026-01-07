@@ -8,12 +8,12 @@ from typing import Dict, List
 
 app = FastAPI(title="GlowMatch ML Service", version="1.0.0")
 
-# Configure CORS
+# Configure CORS - restrict to specific origins in production
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:4200", "http://localhost:8080"],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 

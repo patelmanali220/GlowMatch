@@ -2,6 +2,7 @@ package com.glowmatch.service;
 
 import com.glowmatch.model.AnalysisResponse;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -9,6 +10,8 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.time.Duration;
 
 @Service
 public class AnalysisService {
@@ -18,8 +21,11 @@ public class AnalysisService {
 
     private final RestTemplate restTemplate;
 
-    public AnalysisService() {
-        this.restTemplate = new RestTemplate();
+    public AnalysisService(RestTemplateBuilder restTemplateBuilder) {
+        this.restTemplate = restTemplateBuilder
+                .setConnectTimeout(Duration.ofSeconds(10))
+                .setReadTimeout(Duration.ofSeconds(30))
+                .build();
     }
 
     public AnalysisResponse analyzeImage(MultipartFile file) throws Exception {
