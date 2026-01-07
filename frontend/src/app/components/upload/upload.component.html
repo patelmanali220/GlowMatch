@@ -1,0 +1,45 @@
+<div class="upload-container">
+  <h2>GlowMatch - Skin Tone Analysis</h2>
+  <p class="subtitle">Upload a photo to discover your perfect color palette</p>
+
+  <div class="upload-area" 
+       (drop)="onDrop($event)" 
+       (dragover)="onDragOver($event)"
+       [class.has-file]="previewUrl">
+    
+    <div *ngIf="!previewUrl" class="upload-prompt">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+        <polyline points="17 8 12 3 7 8"></polyline>
+        <line x1="12" y1="3" x2="12" y2="15"></line>
+      </svg>
+      <p>Drag and drop your photo here or</p>
+      <label for="file-input" class="file-label">
+        Choose File
+        <input 
+          id="file-input"
+          type="file" 
+          accept="image/*" 
+          (change)="onFileSelected($event)"
+          style="display: none;">
+      </label>
+    </div>
+
+    <div *ngIf="previewUrl" class="preview-container">
+      <img [src]="previewUrl" alt="Preview">
+      <button class="remove-btn" (click)="reset()" title="Remove image">×</button>
+    </div>
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <button 
+    class="analyze-btn" 
+    [disabled]="!selectedFile || isAnalyzing"
+    (click)="analyzeImage()">
+    <span *ngIf="!isAnalyzing">Analyze My Skin Tone</span>
+    <span *ngIf="isAnalyzing">Analyzing...</span>
+  </button>
+</div>

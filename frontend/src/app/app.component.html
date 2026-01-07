@@ -1,0 +1,12 @@
+<div class="app-container">
+  <app-upload 
+    *ngIf="!analysisResult" 
+    (analysisComplete)="onAnalysisComplete($event)">
+  </app-upload>
+  
+  <app-results 
+    *ngIf="analysisResult" 
+    [result]="analysisResult"
+    (reset)="onReset()">
+  </app-results>
+</div>

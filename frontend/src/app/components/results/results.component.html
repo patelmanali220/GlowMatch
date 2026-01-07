@@ -1,0 +1,63 @@
+<div class="results-container" *ngIf="result">
+  <h2>Your GlowMatch Results</h2>
+
+  <div class="skin-tone-section">
+    <h3>Your Skin Tone</h3>
+    <div class="skin-tone-card">
+      <div class="color-preview" [style.background-color]="getRgbString(result.skinTone.rgb)"></div>
+      <div class="skin-tone-info">
+        <h4>{{ result.skinTone.tone }}</h4>
+        <p>RGB: {{ result.skinTone.rgb.r }}, {{ result.skinTone.rgb.g }}, {{ result.skinTone.rgb.b }}</p>
+        <p>Luminance: {{ result.skinTone.luminance.toFixed(2) }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="recommendations-section">
+    <h3>Color Recommendations</h3>
+
+    <div class="category">
+      <h4>👗 Clothing Colors</h4>
+      <div class="color-grid">
+        <div class="color-card" *ngFor="let color of result.recommendations.clothing">
+          <div class="color-swatch" [style.background-color]="color.hex"></div>
+          <div class="color-info">
+            <h5>{{ color.name }}</h5>
+            <p class="color-hex">{{ color.hex }}</p>
+            <p class="color-reason">{{ color.reason }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h4>💄 Makeup Colors</h4>
+      <div class="color-grid">
+        <div class="color-card" *ngFor="let color of result.recommendations.makeup">
+          <div class="color-swatch" [style.background-color]="color.hex"></div>
+          <div class="color-info">
+            <h5>{{ color.name }}</h5>
+            <p class="color-hex">{{ color.hex }}</p>
+            <p class="color-reason">{{ color.reason }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category">
+      <h4>💎 Jewelry Colors</h4>
+      <div class="color-grid">
+        <div class="color-card" *ngFor="let color of result.recommendations.jewelry">
+          <div class="color-swatch" [style.background-color]="color.hex"></div>
+          <div class="color-info">
+            <h5>{{ color.name }}</h5>
+            <p class="color-hex">{{ color.hex }}</p>
+            <p class="color-reason">{{ color.reason }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="reset-btn" (click)="onReset()">Analyze Another Photo</button>
+</div>

@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  ml-service:
+    build: ./ml-service
+    container_name: glowmatch-ml
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - glowmatch-network
+
+  backend:
+    build: ./backend
+    container_name: glowmatch-backend
+    ports:
+      - "8080:8080"
+    environment:
+      - ML_SERVICE_URL=http://ml-service:8000
+    depends_on:
+      - ml-service
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - glowmatch-network
+
+  frontend:
+    build: ./frontend
+    container_name: glowmatch-frontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - glowmatch-network
+
+networks:
+  glowmatch-network:
+    driver: bridge
