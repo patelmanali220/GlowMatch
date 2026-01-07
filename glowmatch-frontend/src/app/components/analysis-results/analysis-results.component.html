@@ -1,0 +1,174 @@
+@if (result) {
+  <div class="max-w-4xl mx-auto p-6 space-y-6">
+    <!-- Skin Analysis Card -->
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Your Skin Analysis</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Color Swatch -->
+        <div class="space-y-4">
+          <div class="text-center">
+            <div 
+              class="w-32 h-32 mx-auto rounded-full shadow-lg mb-4 ring-4 ring-gray-200"
+              [style.backgroundColor]="result.skinAnalysis.hexColor">
+            </div>
+            <p class="text-sm text-gray-600">Your Skin Tone</p>
+            <p class="text-lg font-semibold text-gray-800">{{ result.skinAnalysis.hexColor }}</p>
+          </div>
+        </div>
+
+        <!-- Analysis Details -->
+        <div class="space-y-4">
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <p class="text-sm text-gray-600">Category</p>
+            <p class="text-xl font-semibold text-gray-800">{{ result.skinAnalysis.skinToneCategory }}</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <p class="text-sm text-gray-600">Depth</p>
+            <p class="text-lg font-medium text-gray-800">{{ result.skinAnalysis.depth }}</p>
+          </div>
+          
+          <div class="bg-gray-50 p-4 rounded-lg">
+            <p class="text-sm text-gray-600">Undertone</p>
+            <p class="text-lg font-medium text-gray-800">{{ result.skinAnalysis.undertone }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendations Card -->
+    <div class="bg-white rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-bold text-gray-800 mb-6">Color Recommendations</h3>
+      
+      <div class="space-y-6">
+        <!-- Clothing Colors -->
+        <div class="border-b border-gray-200 pb-6">
+          <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <svg class="w-5 h-5 mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+            </svg>
+            Clothing Colors
+          </h4>
+          <div>
+            <p class="text-sm text-gray-600 mb-3">{{ result.recommendations.clothing.description }}</p>
+            <div class="flex flex-wrap gap-2">
+              @for (color of result.recommendations.clothing.best_colors; track $index) {
+                <div class="flex flex-col items-center">
+                  <div 
+                    class="w-12 h-12 rounded-lg shadow-md border-2 border-gray-200"
+                    [style.backgroundColor]="color">
+                  </div>
+                  <span class="text-xs text-gray-600 mt-1">{{ color }}</span>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Makeup Colors -->
+        <div class="border-b border-gray-200 pb-6">
+          <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <svg class="w-5 h-5 mr-2 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/>
+            </svg>
+            Makeup Colors
+          </h4>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm font-medium text-gray-700 mb-2">Foundation</p>
+              <div class="flex flex-wrap gap-2">
+                @for (shade of result.recommendations.makeup.foundation.shades; track $index) {
+                  <div class="flex flex-col items-center">
+                    <div 
+                      class="w-12 h-12 rounded-lg shadow-md border-2 border-gray-200"
+                      [style.backgroundColor]="result.recommendations.makeup.foundation.hex_codes[$index]">
+                    </div>
+                    <span class="text-xs text-gray-600 mt-1">{{ shade }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-700 mb-2">Lipstick</p>
+              <div class="flex flex-wrap gap-2">
+                @for (shade of result.recommendations.makeup.lipstick.shades; track $index) {
+                  <div class="flex flex-col items-center">
+                    <div 
+                      class="w-12 h-12 rounded-lg shadow-md border-2 border-gray-200"
+                      [style.backgroundColor]="result.recommendations.makeup.lipstick.hex_codes[$index]">
+                    </div>
+                    <span class="text-xs text-gray-600 mt-1">{{ shade }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-700 mb-2">Eyeshadow</p>
+              <div class="flex flex-wrap gap-2">
+                @for (shade of result.recommendations.makeup.eyeshadow.shades; track $index) {
+                  <div class="flex flex-col items-center">
+                    <div 
+                      class="w-12 h-12 rounded-lg shadow-md border-2 border-gray-200"
+                      [style.backgroundColor]="result.recommendations.makeup.eyeshadow.hex_codes[$index]">
+                    </div>
+                    <span class="text-xs text-gray-600 mt-1">{{ shade }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Jewelry -->
+        <div>
+          <h4 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <svg class="w-5 h-5 mr-2 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+            </svg>
+            Jewelry
+          </h4>
+          <div class="space-y-4">
+            <div>
+              <p class="text-sm font-medium text-gray-700 mb-2">Best Metals</p>
+              <div class="flex flex-wrap gap-2">
+                @for (metal of result.recommendations.jewelry.best_metals; track $index) {
+                  <div class="flex flex-col items-center">
+                    <div 
+                      class="w-12 h-12 rounded-lg shadow-md border-2 border-gray-200"
+                      [style.backgroundColor]="result.recommendations.jewelry.metal_hex[$index]">
+                    </div>
+                    <span class="text-xs text-gray-600 mt-1">{{ metal }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-700 mb-2">Gemstone Colors</p>
+              <div class="flex flex-wrap gap-2">
+                @for (stone of result.recommendations.jewelry.stone_colors; track $index) {
+                  <div class="flex flex-col items-center">
+                    <div 
+                      class="w-12 h-12 rounded-lg shadow-md border-2 border-gray-200"
+                      [style.backgroundColor]="result.recommendations.jewelry.stone_hex[$index]">
+                    </div>
+                    <span class="text-xs text-gray-600 mt-1">{{ stone }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis Details -->
+    <div class="bg-gray-50 rounded-lg p-4">
+      <div class="flex justify-between text-sm text-gray-600">
+        <span>Processing Time: {{ result.analysisDetails.processingTime }}</span>
+        <span>Method: {{ result.analysisDetails.faceDetectionMethod }}</span>
+        <span>Confidence: {{ result.analysisDetails.confidence }}</span>
+      </div>
+    </div>
+  </div>
+}

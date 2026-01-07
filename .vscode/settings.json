@@ -1,0 +1,7 @@
+{
+  "java.project.sourcePaths": [
+    "glowmatch/glowmatch/src/main/java/glowmatch/backend/glowmatch",
+    "backend/src/main/java",
+    "glowmatch-backend/src/main/java/com/glowmatch"
+  ]
+}

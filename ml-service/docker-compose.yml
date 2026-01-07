@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # ML Service - Main Application
+  ml-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: glowmatch-ml-service
+    ports:
+      - "8001:8001"  # API Port
+    volumes:
+      # Mount current directory for live code reload during development
+      - .:/app
+      # Exclude node_modules and cache to avoid sync issues
+      - /app/__pycache__
+    environment:
+      # Pass environment variables from .env file
+      - SERVICE_NAME=GlowMatch ML Service
+      - SERVICE_VERSION=1.0.0
+      - HOST=0.0.0.0
+      - PORT=8001
+      - LOG_LEVEL=info
+      - DEBUG=False
+    # Keep container running if it crashes (useful for debugging)
+    restart: unless-stopped
+    # Health check for the service
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Network configuration (optional - allows communication between containers)
+    networks:
+      - glowmatch-network
+    # Enable logging to see container output
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+# Network for container communication
+networks:
+  glowmatch-network:
+    driver: bridge
+
+# Volume for persistent data (if needed in future)
+volumes:
+  ml-service-data:
