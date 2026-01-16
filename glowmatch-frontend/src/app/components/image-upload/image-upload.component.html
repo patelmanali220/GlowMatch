@@ -1,8 +1,40 @@
-<div class="max-w-2xl mx-auto p-6">
+<div class="max-w-3xl mx-auto p-6">
   <div class="bg-white rounded-lg shadow-lg p-8">
-    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Upload Your Photo</h2>
-    
-    <!-- Drag & Drop Zone -->
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Upload or Capture Your Photo</h2>
+
+    <div class="flex justify-center gap-4 mb-8">
+      <button
+        class="px-6 py-3 rounded-xl font-semibold shadow-md transition-all transform hover:scale-105 active:scale-95"
+        [class.bg-gradient-to-r]="activeMode === 'upload'"
+        [class.from-blue-500]="activeMode === 'upload'"
+        [class.to-blue-600]="activeMode === 'upload'"
+        [class.text-white]="activeMode === 'upload'"
+        [class.shadow-lg]="activeMode === 'upload'"
+        [class.bg-gray-100]="activeMode !== 'upload'"
+        [class.text-gray-700]="activeMode !== 'upload'"
+        [class.hover:bg-gray-200]="activeMode !== 'upload'"
+        (click)="switchMode('upload')">
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+          </svg>
+          Upload Image
+        </span>
+      </button>
+      <button
+        class="px-6 py-3 rounded-xl font-semibold shadow-md transition-all transform hover:scale-105 active:scale-95 bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 shadow-lg"
+        (click)="openCameraModal()">
+        <span class="flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          Take Photo
+        </span>
+      </button>
+    </div>
+
     <div 
       class="border-2 border-dashed rounded-lg p-8 text-center transition-colors"
       [class.border-blue-500]="isDragging"
@@ -11,14 +43,14 @@
       (dragover)="onDragOver($event)"
       (dragleave)="onDragLeave($event)"
       (drop)="onDrop($event)">
-      
+
       @if (!previewUrl) {
         <div class="space-y-4">
           <svg class="mx-auto h-16 w-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
               d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
           </svg>
-          
+
           <div>
             <p class="text-lg text-gray-600">Drag and drop your image here</p>
             <p class="text-sm text-gray-500 mt-2">or</p>
@@ -55,11 +87,118 @@
       }
     </div>
 
-    <!-- Error Message -->
     @if (errorMessage) {
       <div class="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
         <p class="text-red-600 text-sm">{{ errorMessage }}</p>
       </div>
     }
   </div>
+
+  <!-- Camera Modal -->
+  @if (showCameraModal) {
+    <div class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4 backdrop-blur-sm animate-fade-in" (click)="closeCameraModal()">
+      <div class="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-2xl max-w-3xl w-full overflow-hidden animate-slide-up" (click)="$event.stopPropagation()">
+        <!-- Modal Header -->
+        <div class="bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-4 flex justify-between items-center">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Capture Your Photo</h3>
+          </div>
+          <button 
+            (click)="closeCameraModal()"
+            class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white hover:bg-opacity-20 transition-colors text-white text-2xl leading-none">
+            ×
+          </button>
+        </div>
+
+        <div class="p-6 space-y-6">
+          <!-- Camera Preview -->
+          <div class="relative bg-gray-900 rounded-xl overflow-hidden shadow-inner">
+            <video #videoElement class="w-full aspect-video object-cover" autoplay muted playsinline></video>
+            
+            @if (!isCameraActive) {
+              <div class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+                <div class="text-center text-white">
+                  <div class="relative">
+                    <svg class="mx-auto h-20 w-20 mb-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="w-24 h-24 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  </div>
+                  <p class="text-lg font-semibold">Activating Camera...</p>
+                  <p class="text-sm text-gray-400 mt-1">Please allow camera access</p>
+                </div>
+              </div>
+            }
+
+            <!-- Camera Ready Indicator -->
+            @if (isCameraActive) {
+              <div class="absolute top-4 right-4 flex items-center gap-2 bg-green-500 bg-opacity-90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-lg">
+                <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <span class="text-white text-sm font-medium">Camera Ready</span>
+              </div>
+            }
+
+            <!-- Capture Flash Effect -->
+            @if (isCapturing) {
+              <div class="absolute inset-0 bg-white animate-flash"></div>
+            }
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex gap-4 justify-center">
+            <button
+              class="relative px-10 py-4 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-xl hover:from-green-600 hover:to-green-700 transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed text-lg font-semibold transform hover:scale-105 active:scale-95"
+              (click)="capturePhoto()"
+              [disabled]="!isCameraActive || isCapturing">
+              <span class="flex items-center gap-3">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                {{ isCapturing ? 'Capturing...' : 'Capture Photo' }}
+              </span>
+            </button>
+            <button
+              class="px-10 py-4 bg-gray-200 text-gray-700 rounded-xl hover:bg-gray-300 transition-all shadow-md hover:shadow-lg font-semibold transform hover:scale-105 active:scale-95"
+              (click)="closeCameraModal()">
+              Cancel
+            </button>
+          </div>
+
+          <!-- Helper Text -->
+          <div class="text-center">
+            <p class="text-sm text-gray-600">
+              <svg class="inline w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Position your face in the center for best results
+            </p>
+          </div>
+
+          @if (errorMessage) {
+            <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg animate-shake">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-red-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p class="text-red-700 text-sm font-medium">{{ errorMessage }}</p>
+              </div>
+            </div>
+          }
+        </div>
+
+        <canvas #canvas class="hidden"></canvas>
+      </div>
+    </div>
+  }
 </div>

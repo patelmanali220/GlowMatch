@@ -1,0 +1,1521 @@
+{
+  "version": "2.0",
+  "description": "Extended skin tone palettes - 6 depths × 5 undertones = 30 combinations",
+  "depthThresholds": {
+    "Very Fair": 210,
+    "Fair": 180,
+    "Medium": 140,
+    "Tan": 100,
+    "Dark": 60,
+    "Deep": 0
+  },
+  "undertoneHueRanges": {
+    "Warm": [0, 30],
+    "Cool": [330, 360],
+    "Neutral": [30, 60],
+    "Olive": [60, 90],
+    "Golden": [90, 120]
+  },
+  "palettes": {
+    "Very Fair-Warm": {
+      "depth": "Very Fair",
+      "undertone": "Warm",
+      "depthLevel": 1,
+      "characteristics": "Pale, porcelain skin with golden, peachy undertones",
+      "characteristics_detail": "Light and bright with warm golden tones that warm up further in sun",
+      "clothing": [
+        "#FFB347",
+        "#FFA500",
+        "#FF8C00",
+        "#CD853F",
+        "#DEB887",
+        "#F4A460"
+      ],
+      "makeup": {
+        "foundation": [
+          "#F5DEB3",
+          "#FFE4B5",
+          "#FFDAB9"
+        ],
+        "lipstick": [
+          "#FF7F50",
+          "#FF6347",
+          "#E75480"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FF8C00",
+          "#DAA520"
+        ],
+        "stoneNames": [
+          "Amber",
+          "Topaz"
+        ]
+      }
+    },
+    "Very Fair-Cool": {
+      "depth": "Very Fair",
+      "undertone": "Cool",
+      "depthLevel": 1,
+      "characteristics": "Pale, porcelain skin with pink, rosy undertones",
+      "characteristics_detail": "Light and bright with cool pink tones and blue undertones",
+      "clothing": [
+        "#4B0082",
+        "#00CED1",
+        "#E0FFFF",
+        "#B0E0E6",
+        "#ADD8E6",
+        "#87CEEB"
+      ],
+      "makeup": {
+        "foundation": [
+          "#E8E8E8",
+          "#F5F5DC",
+          "#FFFAFA"
+        ],
+        "lipstick": [
+          "#FF1493",
+          "#FF69B4",
+          "#C71585"
+        ],
+        "eyeshadow": [
+          "#4B0082",
+          "#8A2BE2",
+          "#00CED1"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#C0C0C0",
+          "#E8E8E8"
+        ],
+        "metalNames": [
+          "Silver",
+          "Platinum"
+        ],
+        "stones": [
+          "#00CED1",
+          "#FF69B4"
+        ],
+        "stoneNames": [
+          "Turquoise",
+          "Pink Tourmaline"
+        ]
+      }
+    },
+    "Very Fair-Neutral": {
+      "depth": "Very Fair",
+      "undertone": "Neutral",
+      "depthLevel": 1,
+      "characteristics": "Pale, porcelain skin with balanced warm and cool tones",
+      "characteristics_detail": "Light and bright with no dominant warm or cool bias",
+      "clothing": [
+        "#DC143C",
+        "#FF0000",
+        "#FFFFFF",
+        "#000000",
+        "#808080",
+        "#A9A9A9"
+      ],
+      "makeup": {
+        "foundation": [
+          "#F5DEB3",
+          "#FAEBD7",
+          "#F0F8FF"
+        ],
+        "lipstick": [
+          "#DC143C",
+          "#C71585",
+          "#FF6347"
+        ],
+        "eyeshadow": [
+          "#8B008B",
+          "#FF0000",
+          "#006666"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#FF0000",
+          "#006666"
+        ],
+        "stoneNames": [
+          "Ruby",
+          "Emerald"
+        ]
+      }
+    },
+    "Very Fair-Olive": {
+      "depth": "Very Fair",
+      "undertone": "Olive",
+      "depthLevel": 1,
+      "characteristics": "Pale, porcelain skin with subtle greenish undertones",
+      "characteristics_detail": "Light with muted olive and yellowish-green tones",
+      "clothing": [
+        "#6B8E23",
+        "#808000",
+        "#9ACD32",
+        "#ADFF2F",
+        "#BCEE68",
+        "#CDDC39"
+      ],
+      "makeup": {
+        "foundation": [
+          "#F5DEB3",
+          "#E8DCC8",
+          "#EDD9C3"
+        ],
+        "lipstick": [
+          "#B22222",
+          "#8B4513",
+          "#CD853F"
+        ],
+        "eyeshadow": [
+          "#6B8E23",
+          "#808000",
+          "#9ACD32"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#228B22"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Forest Green"
+        ]
+      }
+    },
+    "Very Fair-Golden": {
+      "depth": "Very Fair",
+      "undertone": "Golden",
+      "depthLevel": 1,
+      "characteristics": "Pale, porcelain skin with vibrant golden and yellow undertones",
+      "characteristics_detail": "Light with saturated golden and sunny yellow tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#8B4513"
+      ],
+      "makeup": {
+        "foundation": [
+          "#FFE4B5",
+          "#FFDAB9",
+          "#FFE4C4"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FFA500"
+        ],
+        "stoneNames": [
+          "Citrine",
+          "Golden Topaz"
+        ]
+      }
+    },
+    "Fair-Warm": {
+      "depth": "Fair",
+      "undertone": "Warm",
+      "depthLevel": 2,
+      "characteristics": "Light skin with warm, golden, peachy undertones",
+      "characteristics_detail": "Fair complexion with pronounced warm tones",
+      "clothing": [
+        "#FFB347",
+        "#FF8C00",
+        "#CD853F",
+        "#DEB887",
+        "#F4A460",
+        "#DAA520"
+      ],
+      "makeup": {
+        "foundation": [
+          "#F5DEB3",
+          "#FFE4B5",
+          "#FFDAB9"
+        ],
+        "lipstick": [
+          "#FF6347",
+          "#FF7F50",
+          "#E75480"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FF8C00",
+          "#DAA520"
+        ],
+        "stoneNames": [
+          "Amber",
+          "Topaz"
+        ]
+      }
+    },
+    "Fair-Cool": {
+      "depth": "Fair",
+      "undertone": "Cool",
+      "depthLevel": 2,
+      "characteristics": "Light skin with cool, rosy, pink undertones",
+      "characteristics_detail": "Fair complexion with blue and pink undertones",
+      "clothing": [
+        "#4B0082",
+        "#00CED1",
+        "#E0FFFF",
+        "#B0E0E6",
+        "#ADD8E6",
+        "#87CEEB"
+      ],
+      "makeup": {
+        "foundation": [
+          "#E8E8E8",
+          "#F5F5DC",
+          "#FFFAFA"
+        ],
+        "lipstick": [
+          "#FF1493",
+          "#FF69B4",
+          "#8B0000"
+        ],
+        "eyeshadow": [
+          "#4B0082",
+          "#8A2BE2",
+          "#00CED1"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#C0C0C0",
+          "#E8E8E8"
+        ],
+        "metalNames": [
+          "Silver",
+          "Platinum"
+        ],
+        "stones": [
+          "#00CED1",
+          "#FF69B4"
+        ],
+        "stoneNames": [
+          "Turquoise",
+          "Pink Tourmaline"
+        ]
+      }
+    },
+    "Fair-Neutral": {
+      "depth": "Fair",
+      "undertone": "Neutral",
+      "depthLevel": 2,
+      "characteristics": "Light skin with balanced, versatile undertones",
+      "characteristics_detail": "Fair complexion that works with both warm and cool colors",
+      "clothing": [
+        "#DC143C",
+        "#FF0000",
+        "#FFFFFF",
+        "#000000",
+        "#808080",
+        "#A9A9A9"
+      ],
+      "makeup": {
+        "foundation": [
+          "#F5DEB3",
+          "#FAEBD7",
+          "#F0F8FF"
+        ],
+        "lipstick": [
+          "#DC143C",
+          "#C71585",
+          "#FF6347"
+        ],
+        "eyeshadow": [
+          "#8B008B",
+          "#FF0000",
+          "#006666"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#FF0000",
+          "#006666"
+        ],
+        "stoneNames": [
+          "Ruby",
+          "Emerald"
+        ]
+      }
+    },
+    "Fair-Olive": {
+      "depth": "Fair",
+      "undertone": "Olive",
+      "depthLevel": 2,
+      "characteristics": "Light skin with muted olive, greenish undertones",
+      "characteristics_detail": "Fair complexion with subtle earth tones",
+      "clothing": [
+        "#6B8E23",
+        "#808000",
+        "#9ACD32",
+        "#ADFF2F",
+        "#BCEE68",
+        "#CDDC39"
+      ],
+      "makeup": {
+        "foundation": [
+          "#F5DEB3",
+          "#E8DCC8",
+          "#EDD9C3"
+        ],
+        "lipstick": [
+          "#B22222",
+          "#8B4513",
+          "#CD853F"
+        ],
+        "eyeshadow": [
+          "#6B8E23",
+          "#808000",
+          "#9ACD32"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#228B22"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Forest Green"
+        ]
+      }
+    },
+    "Fair-Golden": {
+      "depth": "Fair",
+      "undertone": "Golden",
+      "depthLevel": 2,
+      "characteristics": "Light skin with golden, sunny yellow undertones",
+      "characteristics_detail": "Fair complexion with vibrant golden tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#8B4513"
+      ],
+      "makeup": {
+        "foundation": [
+          "#FFE4B5",
+          "#FFDAB9",
+          "#FFE4C4"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FFA500"
+        ],
+        "stoneNames": [
+          "Citrine",
+          "Golden Topaz"
+        ]
+      }
+    },
+    "Medium-Warm": {
+      "depth": "Medium",
+      "undertone": "Warm",
+      "depthLevel": 3,
+      "characteristics": "Mid-tone skin with warm, earthy, golden undertones",
+      "characteristics_detail": "Balanced depth with pronounced warm tones",
+      "clothing": [
+        "#8B4513",
+        "#D2691E",
+        "#CD853F",
+        "#FF8C00",
+        "#FFB347",
+        "#DAA520"
+      ],
+      "makeup": {
+        "foundation": [
+          "#C9A877",
+          "#D4A574",
+          "#DEB887"
+        ],
+        "lipstick": [
+          "#E75480",
+          "#FF6347",
+          "#FF8C00"
+        ],
+        "eyeshadow": [
+          "#8B4513",
+          "#CD853F",
+          "#FFD700"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#8B4513",
+          "#FFD700"
+        ],
+        "stoneNames": [
+          "Bronze",
+          "Gold"
+        ]
+      }
+    },
+    "Medium-Cool": {
+      "depth": "Medium",
+      "undertone": "Cool",
+      "depthLevel": 3,
+      "characteristics": "Mid-tone skin with cool, jewel-like, blue undertones",
+      "characteristics_detail": "Balanced depth with cool, vibrant tones",
+      "clothing": [
+        "#4B0082",
+        "#008080",
+        "#20B2AA",
+        "#3CB371",
+        "#66CDAA",
+        "#00FA9A"
+      ],
+      "makeup": {
+        "foundation": [
+          "#C9A877",
+          "#BC8F8F",
+          "#A0826D"
+        ],
+        "lipstick": [
+          "#8B008B",
+          "#FF1493",
+          "#00CED1"
+        ],
+        "eyeshadow": [
+          "#483D8B",
+          "#4169E1",
+          "#00CED1"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#C0C0C0",
+          "#E8E8E8"
+        ],
+        "metalNames": [
+          "Silver",
+          "Platinum"
+        ],
+        "stones": [
+          "#00CED1",
+          "#50C878"
+        ],
+        "stoneNames": [
+          "Turquoise",
+          "Emerald"
+        ]
+      }
+    },
+    "Medium-Neutral": {
+      "depth": "Medium",
+      "undertone": "Neutral",
+      "depthLevel": 3,
+      "characteristics": "Mid-tone skin with balanced, versatile undertones",
+      "characteristics_detail": "Balanced depth that works with many color palettes",
+      "clothing": [
+        "#50C878",
+        "#DC143C",
+        "#FF4500",
+        "#228B22",
+        "#FFD700",
+        "#FF6347"
+      ],
+      "makeup": {
+        "foundation": [
+          "#C9A877",
+          "#D4A574",
+          "#BC8F8F"
+        ],
+        "lipstick": [
+          "#DC143C",
+          "#FF4500",
+          "#C71585"
+        ],
+        "eyeshadow": [
+          "#50C878",
+          "#FFD700",
+          "#FF4500"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#50C878",
+          "#FF4500"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Orange Topaz"
+        ]
+      }
+    },
+    "Medium-Olive": {
+      "depth": "Medium",
+      "undertone": "Olive",
+      "depthLevel": 3,
+      "characteristics": "Mid-tone skin with subtle olive, muted green undertones",
+      "characteristics_detail": "Balanced depth with earthy, understated tones",
+      "clothing": [
+        "#556B2F",
+        "#6B8E23",
+        "#808000",
+        "#9ACD32",
+        "#ADFF2F",
+        "#BCEE68"
+      ],
+      "makeup": {
+        "foundation": [
+          "#D4A574",
+          "#C9A877",
+          "#BC8F8F"
+        ],
+        "lipstick": [
+          "#8B4513",
+          "#CD853F",
+          "#A0522D"
+        ],
+        "eyeshadow": [
+          "#556B2F",
+          "#6B8E23",
+          "#9ACD32"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#228B22"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Forest Green"
+        ]
+      }
+    },
+    "Medium-Golden": {
+      "depth": "Medium",
+      "undertone": "Golden",
+      "depthLevel": 3,
+      "characteristics": "Mid-tone skin with vibrant golden, sunny undertones",
+      "characteristics_detail": "Balanced depth with saturated golden tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#8B4513"
+      ],
+      "makeup": {
+        "foundation": [
+          "#D4A574",
+          "#DEB887",
+          "#C9A877"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FFA500"
+        ],
+        "stoneNames": [
+          "Citrine",
+          "Golden Topaz"
+        ]
+      }
+    },
+    "Tan-Warm": {
+      "depth": "Tan",
+      "undertone": "Warm",
+      "depthLevel": 4,
+      "characteristics": "Deep tan skin with warm, earthy, golden undertones",
+      "characteristics_detail": "Deeper complexion with pronounced warm tones",
+      "clothing": [
+        "#8B4513",
+        "#A0522D",
+        "#CD853F",
+        "#D2691E",
+        "#FF8C00",
+        "#FFB347"
+      ],
+      "makeup": {
+        "foundation": [
+          "#A0826D",
+          "#8B7355",
+          "#704214"
+        ],
+        "lipstick": [
+          "#8B4513",
+          "#FF6347",
+          "#FF8C00"
+        ],
+        "eyeshadow": [
+          "#8B4513",
+          "#A0522D",
+          "#CD853F"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#8B4513",
+          "#A0522D"
+        ],
+        "stoneNames": [
+          "Bronze",
+          "Copper"
+        ]
+      }
+    },
+    "Tan-Cool": {
+      "depth": "Tan",
+      "undertone": "Cool",
+      "depthLevel": 4,
+      "characteristics": "Deep tan skin with cool, jewel-like undertones",
+      "characteristics_detail": "Deeper complexion with cool, vibrant tones",
+      "clothing": [
+        "#008080",
+        "#20B2AA",
+        "#3CB371",
+        "#00CED1",
+        "#87CEEB",
+        "#4169E1"
+      ],
+      "makeup": {
+        "foundation": [
+          "#8B7355",
+          "#704214",
+          "#5C4033"
+        ],
+        "lipstick": [
+          "#00CED1",
+          "#FF1493",
+          "#8B008B"
+        ],
+        "eyeshadow": [
+          "#008080",
+          "#20B2AA",
+          "#00CED1"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#C0C0C0",
+          "#E8E8E8"
+        ],
+        "metalNames": [
+          "Silver",
+          "Platinum"
+        ],
+        "stones": [
+          "#00CED1",
+          "#50C878"
+        ],
+        "stoneNames": [
+          "Turquoise",
+          "Emerald"
+        ]
+      }
+    },
+    "Tan-Neutral": {
+      "depth": "Tan",
+      "undertone": "Neutral",
+      "depthLevel": 4,
+      "characteristics": "Deep tan skin with balanced, versatile undertones",
+      "characteristics_detail": "Deeper complexion that works with diverse colors",
+      "clothing": [
+        "#DC143C",
+        "#FF4500",
+        "#50C878",
+        "#228B22",
+        "#FFD700",
+        "#FF6347"
+      ],
+      "makeup": {
+        "foundation": [
+          "#8B7355",
+          "#A0826D",
+          "#704214"
+        ],
+        "lipstick": [
+          "#DC143C",
+          "#FF4500",
+          "#C71585"
+        ],
+        "eyeshadow": [
+          "#50C878",
+          "#FFD700",
+          "#FF4500"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#FF4500"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Orange Topaz"
+        ]
+      }
+    },
+    "Tan-Olive": {
+      "depth": "Tan",
+      "undertone": "Olive",
+      "depthLevel": 4,
+      "characteristics": "Deep tan skin with olive, muted green undertones",
+      "characteristics_detail": "Deeper complexion with earthy, muted tones",
+      "clothing": [
+        "#556B2F",
+        "#6B8E23",
+        "#808000",
+        "#9ACD32",
+        "#ADFF2F",
+        "#6B8E23"
+      ],
+      "makeup": {
+        "foundation": [
+          "#704214",
+          "#5C4033",
+          "#8B7355"
+        ],
+        "lipstick": [
+          "#8B4513",
+          "#A0522D",
+          "#CD853F"
+        ],
+        "eyeshadow": [
+          "#556B2F",
+          "#6B8E23",
+          "#808000"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#228B22"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Forest Green"
+        ]
+      }
+    },
+    "Tan-Golden": {
+      "depth": "Tan",
+      "undertone": "Golden",
+      "depthLevel": 4,
+      "characteristics": "Deep tan skin with vibrant golden, sunny undertones",
+      "characteristics_detail": "Deeper complexion with saturated golden tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#8B4513"
+      ],
+      "makeup": {
+        "foundation": [
+          "#704214",
+          "#8B4513",
+          "#A0522D"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FFA500"
+        ],
+        "stoneNames": [
+          "Citrine",
+          "Golden Topaz"
+        ]
+      }
+    },
+    "Dark-Warm": {
+      "depth": "Dark",
+      "undertone": "Warm",
+      "depthLevel": 5,
+      "characteristics": "Dark skin with vibrant warm, golden, earthy undertones",
+      "characteristics_detail": "Deep complexion with rich warm tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#8B4513"
+      ],
+      "makeup": {
+        "foundation": [
+          "#3D3D3D",
+          "#545454",
+          "#696969"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FF4500"
+        ],
+        "stoneNames": [
+          "Gold",
+          "Deep Orange"
+        ]
+      }
+    },
+    "Dark-Cool": {
+      "depth": "Dark",
+      "undertone": "Cool",
+      "depthLevel": 5,
+      "characteristics": "Dark skin with cool, bright jewel-like undertones",
+      "characteristics_detail": "Deep complexion with vibrant cool tones",
+      "clothing": [
+        "#00CED1",
+        "#87CEEB",
+        "#00FA9A",
+        "#20B2AA",
+        "#FF1493",
+        "#FF69B4"
+      ],
+      "makeup": {
+        "foundation": [
+          "#3D3D3D",
+          "#545454",
+          "#696969"
+        ],
+        "lipstick": [
+          "#FF1493",
+          "#FF69B4",
+          "#00CED1"
+        ],
+        "eyeshadow": [
+          "#00CED1",
+          "#87CEEB",
+          "#FF1493"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#C0C0C0",
+          "#E8E8E8"
+        ],
+        "metalNames": [
+          "Silver",
+          "Platinum"
+        ],
+        "stones": [
+          "#00CED1",
+          "#FF1493"
+        ],
+        "stoneNames": [
+          "Turquoise",
+          "Hot Pink"
+        ]
+      }
+    },
+    "Dark-Neutral": {
+      "depth": "Dark",
+      "undertone": "Neutral",
+      "depthLevel": 5,
+      "characteristics": "Dark skin with balanced, versatile undertones",
+      "characteristics_detail": "Deep complexion that complements diverse color palettes",
+      "clothing": [
+        "#FFD700",
+        "#FF1493",
+        "#00CED1",
+        "#50C878",
+        "#FF4500",
+        "#FF6347"
+      ],
+      "makeup": {
+        "foundation": [
+          "#545454",
+          "#696969",
+          "#808080"
+        ],
+        "lipstick": [
+          "#FF1493",
+          "#FF4500",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#00CED1",
+          "#FF1493"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#FFD700",
+          "#00CED1"
+        ],
+        "stoneNames": [
+          "Gold",
+          "Sapphire"
+        ]
+      }
+    },
+    "Dark-Olive": {
+      "depth": "Dark",
+      "undertone": "Olive",
+      "depthLevel": 5,
+      "characteristics": "Dark skin with olive, muted green undertones",
+      "characteristics_detail": "Deep complexion with earthy, understated tones",
+      "clothing": [
+        "#6B8E23",
+        "#808000",
+        "#9ACD32",
+        "#ADFF2F",
+        "#50C878",
+        "#228B22"
+      ],
+      "makeup": {
+        "foundation": [
+          "#3D3D3D",
+          "#545454",
+          "#696969"
+        ],
+        "lipstick": [
+          "#8B4513",
+          "#A0522D",
+          "#CD853F"
+        ],
+        "eyeshadow": [
+          "#6B8E23",
+          "#808000",
+          "#9ACD32"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#228B22"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Forest Green"
+        ]
+      }
+    },
+    "Dark-Golden": {
+      "depth": "Dark",
+      "undertone": "Golden",
+      "depthLevel": 5,
+      "characteristics": "Dark skin with vibrant golden, sunny undertones",
+      "characteristics_detail": "Deep complexion with saturated golden tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#50C878"
+      ],
+      "makeup": {
+        "foundation": [
+          "#545454",
+          "#696969",
+          "#808080"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FFA500"
+        ],
+        "stoneNames": [
+          "Citrine",
+          "Golden Topaz"
+        ]
+      }
+    },
+    "Deep-Warm": {
+      "depth": "Deep",
+      "undertone": "Warm",
+      "depthLevel": 6,
+      "characteristics": "Very dark, deep skin with warm golden undertones that stand out boldly",
+      "characteristics_detail": "Darkest complexion with rich, vibrant warm tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#50C878"
+      ],
+      "makeup": {
+        "foundation": [
+          "#1a1a1a",
+          "#2d2d2d",
+          "#404040"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FF4500"
+        ],
+        "stoneNames": [
+          "Gold",
+          "Deep Orange"
+        ]
+      }
+    },
+    "Deep-Cool": {
+      "depth": "Deep",
+      "undertone": "Cool",
+      "depthLevel": 6,
+      "characteristics": "Very dark, deep skin with cool, bright jewel tones",
+      "characteristics_detail": "Darkest complexion with vibrant cool colors",
+      "clothing": [
+        "#00CED1",
+        "#87CEEB",
+        "#00FA9A",
+        "#20B2AA",
+        "#FF1493",
+        "#FF69B4"
+      ],
+      "makeup": {
+        "foundation": [
+          "#1a1a1a",
+          "#2d2d2d",
+          "#404040"
+        ],
+        "lipstick": [
+          "#FF1493",
+          "#FF69B4",
+          "#00CED1"
+        ],
+        "eyeshadow": [
+          "#00CED1",
+          "#87CEEB",
+          "#FF1493"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#C0C0C0",
+          "#E8E8E8"
+        ],
+        "metalNames": [
+          "Silver",
+          "Platinum"
+        ],
+        "stones": [
+          "#00CED1",
+          "#FF1493"
+        ],
+        "stoneNames": [
+          "Turquoise",
+          "Hot Pink"
+        ]
+      }
+    },
+    "Deep-Neutral": {
+      "depth": "Deep",
+      "undertone": "Neutral",
+      "depthLevel": 6,
+      "characteristics": "Very dark, deep skin with balanced, versatile undertones",
+      "characteristics_detail": "Darkest complexion that works with bold and bright colors",
+      "clothing": [
+        "#FFD700",
+        "#FF1493",
+        "#00CED1",
+        "#50C878",
+        "#FF4500",
+        "#FF6347"
+      ],
+      "makeup": {
+        "foundation": [
+          "#2d2d2d",
+          "#404040",
+          "#545454"
+        ],
+        "lipstick": [
+          "#FF1493",
+          "#FF4500",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#00CED1",
+          "#FF1493"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#FFD700",
+          "#00CED1"
+        ],
+        "stoneNames": [
+          "Gold",
+          "Sapphire"
+        ]
+      }
+    },
+    "Deep-Olive": {
+      "depth": "Deep",
+      "undertone": "Olive",
+      "depthLevel": 6,
+      "characteristics": "Very dark, deep skin with olive, muted green undertones",
+      "characteristics_detail": "Darkest complexion with earthy, understated tones",
+      "clothing": [
+        "#6B8E23",
+        "#808000",
+        "#9ACD32",
+        "#ADFF2F",
+        "#50C878",
+        "#228B22"
+      ],
+      "makeup": {
+        "foundation": [
+          "#1a1a1a",
+          "#2d2d2d",
+          "#404040"
+        ],
+        "lipstick": [
+          "#8B4513",
+          "#A0522D",
+          "#CD853F"
+        ],
+        "eyeshadow": [
+          "#6B8E23",
+          "#808000",
+          "#9ACD32"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#C0C0C0"
+        ],
+        "metalNames": [
+          "Gold",
+          "Silver"
+        ],
+        "stones": [
+          "#50C878",
+          "#228B22"
+        ],
+        "stoneNames": [
+          "Emerald",
+          "Forest Green"
+        ]
+      }
+    },
+    "Deep-Golden": {
+      "depth": "Deep",
+      "undertone": "Golden",
+      "depthLevel": 6,
+      "characteristics": "Very dark, deep skin with vibrant golden, sunny undertones",
+      "characteristics_detail": "Darkest complexion with saturated golden tones",
+      "clothing": [
+        "#FFD700",
+        "#FFA500",
+        "#FF8C00",
+        "#FF6347",
+        "#DC143C",
+        "#50C878"
+      ],
+      "makeup": {
+        "foundation": [
+          "#404040",
+          "#545454",
+          "#696969"
+        ],
+        "lipstick": [
+          "#FF4500",
+          "#FF6347",
+          "#DC143C"
+        ],
+        "eyeshadow": [
+          "#FFD700",
+          "#FFA500",
+          "#FF8C00"
+        ]
+      },
+      "jewelry": {
+        "metals": [
+          "#FFD700",
+          "#B76E79"
+        ],
+        "metalNames": [
+          "Gold",
+          "Rose Gold"
+        ],
+        "stones": [
+          "#FFD700",
+          "#FFA500"
+        ],
+        "stoneNames": [
+          "Citrine",
+          "Golden Topaz"
+        ]
+      }
+    }
+  }
+}
